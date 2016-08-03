@@ -44,7 +44,7 @@ public class NewsFragment extends Fragment{
 		app=(NewsApplication) getActivity().getApplication();
 		modle=new NewsModle();
 		getData();
-		getData();
+		getData();//é‡å¤è°ƒç”¨æ˜¯ä¸ºäº†å¤šæ˜¾ç¤ºå‡ æ¡æ•°æ®ï¼Œä¸€æ¬¡è¯·æ±‚è¿”å›æ•°æ®å¤ªå°‘ä¸”æ²¡æ³•æ›´æ”¹
 		setViews(view);
 		
 		return view;
@@ -91,7 +91,7 @@ newsAdapter.setonlong(new onLong(){
 			public void Longclick(View v, int position) {
 					News n=news.get(position);
 					NewsApplication.getApp().setSubNews(n);
-					Toast.makeText(getActivity(), "ÊÕ²Ø³É¹¦", 0).show();
+					Toast.makeText(getActivity(), "æ”¶è—æˆåŠŸ", 0).show();
 				
 			}
 
@@ -105,18 +105,18 @@ newsAdapter.setonlong(new onLong(){
 			}
 		});
 		/**
-		 * ·ÖÒ³¼ÓÔØ
+		 * åˆ†é¡µåŠ è½½
 		 */
 		lv.setOnScrollListener(new OnScrollListener() {
 			
 			/**
-			 * ¼ÓÔØÊı¾İ
+			 * åŠ è½½æ•°æ®
 			 */
 			@Override
 			public void onScrollStateChanged(AbsListView view, int scrollState) {
 				if(scrollState==OnScrollListener.SCROLL_STATE_IDLE&&isbotom==true){
 					i=1;
-					getData();//·şÎñÆ÷¹Ì¶¨·µ»ØÎåÌõÊı¾İÃ»·¨¸ü¸Ä
+					getData();//æœåŠ¡å™¨å›ºå®šè¿”å›äº”æ¡æ•°æ®æ²¡æ³•æ›´æ”¹
 					getData();
 					i++;
 				}
@@ -126,7 +126,7 @@ newsAdapter.setonlong(new onLong(){
 			@Override
 			public void onScroll(AbsListView view, int firstVisibleItem,
 					int visibleItemCount, int totalItemCount) {
-				//ÅĞ¶ÏÊÇ·ñµ½´ïµ×²¿
+				//åˆ¤æ–­æ˜¯å¦åˆ°è¾¾åº•éƒ¨
 				if(firstVisibleItem+visibleItemCount==totalItemCount){
 					isbotom=true;
 				}else{
