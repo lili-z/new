@@ -64,7 +64,7 @@ public class NewsFragment extends Fragment{
 					
 					if(news!=null){
 						NewsFragment.news.addAll(news);
-					if(newsAdapter!=null){
+					if(newsAdapter!=null){//分页加载
 						app.setNews(NewsFragment.news);
 						newsAdapter.notifyDataSetChanged();
 					}
